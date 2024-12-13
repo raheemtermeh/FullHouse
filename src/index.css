@@ -1,0 +1,30 @@
+@import './assets/fonts/fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'IranianSans', sans-serif;
+  background-color: #08090a;
+  color: #ffffff;
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* مقدار منفی برای حرکت به بالا */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-up-down {
+  animation: up-down 2s ease-in-out infinite;
+}
+
+
+
