@@ -16,9 +16,9 @@ const Header = () => {
         <Link to="/apps" className="hover:text-gray-400">
           اپلیکیشن‌ها
         </Link>
-        <Link to="/docs" className="hover:text-gray-400">
+        {/* <Link to="/docs" className="hover:text-gray-400">
           مستندات
-        </Link>
+        </Link> */}
         <Link to="/support" className="hover:text-gray-400">
           پشتیبانی
         </Link>

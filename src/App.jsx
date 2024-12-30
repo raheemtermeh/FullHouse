@@ -11,6 +11,12 @@ import Collections from "./pages/Collections";
 import Docs from "./pages/Docs";
 import Applications from "./pages/Applications";
 import Footer from "./components/homeElement/Footer";
+import ProductPage from "./pages/ProductPage";
+import Cart from "./pages/Cart";
+import Auth from "./pages/Auth";
+import Dashboard from "./pages/Dashboard";
+import Wishlist from "./pages/Wishlist";
+import ServerError from "./pages/ServerError";
 
 const App = () => {
   return (
@@ -25,7 +31,12 @@ const App = () => {
           <Route path="/search" element={<Search />} />
           <Route path="/collections" element={<Collections />} />
           <Route path="/apps" element={<Applications />} />
-          <Route path="/docs" element={<Docs />} />
+          <Route path="/product/:productId" element={<ProductPage />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/500" element={<ServerError />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
