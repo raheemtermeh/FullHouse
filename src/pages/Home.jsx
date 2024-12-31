@@ -6,6 +6,7 @@ import CardSlider from "../components/homeElement/CardSlider";
 import Section from "../components/homeElement/Section";
 import CardSection from "../components/homeElement/Section";
 import Build from "../components/homeElement/‌Build";
+import Collections from "./Collections";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -37,7 +38,7 @@ const Home = () => {
   return (
     <>
       <HeroSection />
-      <CardSlider title="کارت‌های برتر" cards={products.slice(0, 8)} />
+      {/* <CardSlider title="کارت‌های برتر" cards={products.slice(0, 8)} /> */}
       <Section
         title="برنامه‌های جدید ساخته‌شده و پشتیبانی‌شده"
         apiEndpoint="https://fakestoreapi.com/products"
@@ -46,9 +47,14 @@ const Home = () => {
         title="محصولات محبوب"
         apiEndpoint="https://fakestoreapi.com/products"
       />
-      <CardSlider title="کارت‌های دیگر" cards={products.slice(8)} />
+      <Collections />
+      <Section
+        title="محصولات محبوب"
+        apiEndpoint="https://fakestoreapi.com/products"
+      />
+      {/* <CardSlider title="کارت‌های دیگر" cards={products.slice(8)} /> */}
+
       <Build />
-      
     </>
   );
 };

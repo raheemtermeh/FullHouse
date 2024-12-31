@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, } from "react";
+import { Link } from "react-router-dom";
 
 const Section = ({ title, apiEndpoint }) => {
   const [cards, setCards] = useState([]);
@@ -54,9 +55,12 @@ const Section = ({ title, apiEndpoint }) => {
       <h2 className="text-2xl font-bold mb-4 text-right text-gray-200">
         {title}
       </h2>
-      <h2 className="text-md font-bold mb-4 text-left text-[#0051ff]">
+      <Link
+        to="/products"
+        className="text-md font-bold mb-4 text-left text-blue-500 hover:underline"
+      >
         مشاهده همه
-      </h2>
+      </Link>
       {loading ? (
         <p className="text-center text-gray-400">در حال بارگذاری...</p>
       ) : error ? (

@@ -17,6 +17,7 @@ import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import Wishlist from "./pages/Wishlist";
 import ServerError from "./pages/ServerError";
+import AllProductsPage from "./pages/AllProductsPage";
 
 const App = () => {
   return (
@@ -36,6 +37,13 @@ const App = () => {
           <Route path="/auth" element={<Auth />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/wishlist" element={<Wishlist />} />
+          <Route
+            path="/products"
+            element={
+              <AllProductsPage apiEndpoint="https://fakestoreapi.com/products" />
+            }
+          />
+
           <Route path="/500" element={<ServerError />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
